@@ -210,5 +210,5 @@ builder.defineCatalogHandler(({ type, id }) => {
 });
 
 console.log("📦 Manifest:", builder.getInterface().manifest);
-serveHTTP(builder.getInterface(), { port: 7000 });
+serveHTTP(builder.getInterface(), { port: process.env.PORT || 7000 });
 console.log("🚀 SKTonline Online addon beží na http://localhost:7000/manifest.json");
